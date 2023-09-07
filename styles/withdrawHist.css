@@ -1,0 +1,111 @@
+html { 
+  color-scheme: dark;
+}
+
+body { 
+  color: #eee;
+  font-size: 1.125rem;
+  font-family: system-ui;
+  line-height: 1.5;
+}
+
+.wrap-container { 
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  margin-top: 1rem;
+  align-items: center;
+  margin-top: -1rem;
+  z-index: 12;
+}
+
+nav .top { 
+  display: flex;
+  margin-top: 1.3rem;
+}
+nav .top .logo a h2 { 
+  font-size: 1rem;
+  margin-top: 12rem;
+}
+
+.danger { 
+  color: #ff77b2;
+}
+
+nav .top .logo a h2 {
+  margin-top: -40px;
+  margin-left: 3.7rem;
+}
+
+nav .logo a { 
+  text-decoration: none;
+}
+
+nav .logo img { 
+  width: 3rem;
+  margin-left: 0.5rem;
+  margin-top: -0.9rem;
+}
+
+nav .close { 
+  display: none;
+}
+/* END OF NAVBAR*/
+
+.wrapper { 
+  width: min(900px, 100% - 3rem);
+  margin-inline: auto;
+  margin-top: 3rem;
+}
+
+table { 
+  width: 100%;
+  background: #323232;
+  border-collapse: collapse;
+}
+
+caption, th, td { 
+ padding: 1rem;
+}
+
+caption, th { 
+  text-align: left;
+}
+
+caption { 
+  background: hsl(0 0% 0%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+th { 
+  background: hsl(0 0% 0% / 0.5);
+}
+
+tr:nth-of-type(2n) { 
+  background: hsl(0 0% 0% / .4);
+}
+
+@media (max-width: 650px) { 
+  th { 
+    display: none;
+  }
+  td { 
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 15ch auto;
+    padding: 0.5rem 1rem;
+  }
+  td:first-child { 
+    padding: 0.5rem 1rem;
+  }
+  td:last-child { 
+    padding-bottom: 2rem;
+  }
+  td::before { 
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}
